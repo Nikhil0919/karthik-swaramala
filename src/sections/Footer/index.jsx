@@ -1,6 +1,8 @@
+import { useTranslation } from 'react-i18next';
 import './Footer.css';
 
 const Footer = () => {
+    const { t } = useTranslation();
     const currentYear = new Date().getFullYear();
 
     const scrollToSection = (id) => {
@@ -17,11 +19,10 @@ const Footer = () => {
                     <div className="footer-section">
                         <div className="footer-logo">
                             <span className="logo-icon">📼</span>
-                            <span className="logo-text">Sree Karthik Swaramala</span>
+                            <span className="logo-text">{t('footer.brandName')}</span>
                         </div>
                         <p className="footer-description">
-                            Professional media conversion services for preserving your precious memories.
-                            Transform cassettes, CDs, and video tapes to digital with care and quality.
+                            {t('footer.description')}
                         </p>
                         <div className="social-links">
                             <a href="#" aria-label="Facebook">📘</a>
@@ -32,58 +33,58 @@ const Footer = () => {
                     </div>
 
                     <div className="footer-section">
-                        <h4>Quick Links</h4>
+                        <h4>{t('footer.quickLinks')}</h4>
                         <ul className="footer-links">
-                            <li onClick={() => scrollToSection('services')}>Services</li>
-                            <li onClick={() => scrollToSection('how-it-works')}>How It Works</li>
-                            <li onClick={() => scrollToSection('faq')}>FAQ</li>
-                            <li onClick={() => scrollToSection('contact')}>Contact</li>
-                            <li onClick={() => scrollToSection('order')}>Order Now</li>
+                            <li onClick={() => scrollToSection('services')}>{t('footer.services')}</li>
+                            <li onClick={() => scrollToSection('how-it-works')}>{t('footer.howItWorks')}</li>
+                            <li onClick={() => scrollToSection('faq')}>{t('footer.faq')}</li>
+                            <li onClick={() => scrollToSection('contact')}>{t('footer.contact')}</li>
+                            <li onClick={() => scrollToSection('order')}>{t('footer.orderNow')}</li>
                         </ul>
                     </div>
 
                     <div className="footer-section">
-                        <h4>Our Services</h4>
+                        <h4>{t('footer.ourServices')}</h4>
                         <ul className="footer-links">
-                            <li>CD to Pendrive</li>
-                            <li>VCR Cassette to Digital</li>
-                            <li>Audio Cassette Conversion</li>
-                            <li>Old Negative to Photo Print</li>
-                            <li>Voice Recording Services</li>
+                            <li>{t('footer.cdToPendrive')}</li>
+                            <li>{t('footer.vcrToDigital')}</li>
+                            <li>{t('footer.audioCassetteConversion')}</li>
+                            <li>{t('footer.negativeToPhoto')}</li>
+                            <li>{t('footer.voiceRecording')}</li>
                         </ul>
                     </div>
 
                     <div className="footer-section">
-                        <h4>Contact Info</h4>
+                        <h4>{t('footer.contactInfo')}</h4>
                         <ul className="footer-contact">
                             <li>
                                 <span className="contact-icon">📍</span>
-                                Durgaiah Street, Near Rajtowers Hotel,<br />Governor Peta, Vijayawada
+                                <span style={{ whiteSpace: 'pre-line' }}>{t('footer.address')}</span>
                             </li>
                             <li>
                                 <span className="contact-icon">📞</span>
-                                8499009004
+                                {t('footer.phone')}
                             </li>
                             <li>
                                 <span className="contact-icon">💬</span>
-                                WhatsApp Available
+                                {t('footer.whatsappAvailable')}
                             </li>
                             <li>
                                 <span className="contact-icon">🕒</span>
-                                Mon-Sat: 10 AM - 7 PM
+                                {t('footer.businessHours')}
                             </li>
                         </ul>
                     </div>
                 </div>
 
                 <div className="footer-bottom">
-                    <p>&copy; {currentYear} Sree Karthik Swaramala. All rights reserved.</p>
+                    <p>&copy; {currentYear} {t('footer.brandName')}. {t('footer.allRightsReserved')}</p>
                     <div className="footer-bottom-links">
-                        <a href="#">Privacy Policy</a>
+                        <a href="#">{t('footer.privacyPolicy')}</a>
                         <span>•</span>
-                        <a href="#">Terms of Service</a>
+                        <a href="#">{t('footer.termsOfService')}</a>
                         <span>•</span>
-                        <a href="#">Cookie Policy</a>
+                        <a href="#">{t('footer.cookiePolicy')}</a>
                     </div>
                 </div>
             </div>

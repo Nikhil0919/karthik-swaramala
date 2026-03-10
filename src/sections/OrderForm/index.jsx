@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import { WHATSAPP_NUMBER, MEDIA_TYPES, OUTPUT_FORMATS } from '../config/constants';
+import { useTranslation } from 'react-i18next';
+import { WHATSAPP_NUMBER, MEDIA_TYPES, OUTPUT_FORMATS } from '../../config/constants';
 import './OrderForm.css';
 
 const OrderForm = () => {
+    const { t } = useTranslation();
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -36,25 +38,25 @@ const OrderForm = () => {
         const newErrors = {};
 
         if (!formData.name.trim()) {
-            newErrors.name = 'Name is required';
+            newErrors.name = t('orderForm.nameRequired');
         }
 
         if (!formData.phone.trim()) {
-            newErrors.phone = 'Phone number is required';
+            newErrors.phone = t('orderForm.phoneRequired');
         } else if (!/^\d{10}$/.test(formData.phone.replace(/\s/g, ''))) {
-            newErrors.phone = 'Please enter a valid 10-digit phone number';
+            newErrors.phone = t('orderForm.phoneInvalid');
         }
 
         if (!formData.mediaType) {
-            newErrors.mediaType = 'Please select media type';
+            newErrors.mediaType = t('orderForm.mediaTypeRequired');
         }
 
         if (!formData.outputFormat) {
-            newErrors.outputFormat = 'Please select output format';
+            newErrors.outputFormat = t('orderForm.outputFormatRequired');
         }
 
         if (!formData.quantity || formData.quantity < 1) {
-            newErrors.quantity = 'Quantity must be at least 1';
+            newErrors.quantity = t('orderForm.quantityInvalid');
         }
 
         setErrors(newErrors);
@@ -70,17 +72,17 @@ const OrderForm = () => {
 
         // Generate WhatsApp message
         const message = `
-🎬 *New Media Conversion Request*
+🎬 *${t('orderForm.whatsappMessage.title')}*
 
-👤 *Name:* ${formData.name}
-📱 *Phone:* ${formData.phone}
-📼 *Media Type:* ${formData.mediaType}
-💾 *Output Format:* ${formData.outputFormat}
-📦 *Quantity:* ${formData.quantity} item(s)
-🚚 *Delivery Method:* ${formData.delivery === 'pickup' ? 'Pickup from store' : 'Home delivery'}
-${formData.notes ? `\n📝 *Notes:* ${formData.notes}` : ''}
+👤 *${t('orderForm.whatsappMessage.name')}* ${formData.name}
+📱 *${t('orderForm.whatsappMessage.phone')}* ${formData.phone}
+📼 *${t('orderForm.whatsappMessage.mediaType')}* ${formData.mediaType}
+💾 *${t('orderForm.whatsappMessage.outputFormat')}* ${formData.outputFormat}
+📦 *${t('orderForm.whatsappMessage.quantity')}* ${formData.quantity} ${t('orderForm.whatsappMessage.items')}
+🚚 *${t('orderForm.whatsappMessage.deliveryMethod')}* ${formData.delivery === 'pickup' ? t('orderForm.whatsappMessage.pickupFromStore') : t('orderForm.whatsappMessage.homeDelivery')}
+${formData.notes ? `\n📝 *${t('orderForm.whatsappMessage.notes')}* ${formData.notes}` : ''}
 
-Thank you! Looking forward to your service.
+${t('orderForm.whatsappMessage.thankYou')}
     `.trim();
 
         // Encode message for URL
@@ -112,9 +114,9 @@ Thank you! Looking forward to your service.
         <section id="order" className="order-form-section">
             <div className="order-container">
                 <div className="section-header">
-                    <h2 className="section-title">Place Your Order</h2>
+                    <h2 className="section-title">{t('orderForm.title')}</h2>
                     <p className="section-subtitle">
-                        Fill out the form below and send your order directly via WhatsApp
+                        {t('orderForm.subtitle')}
                     </p>
                 </div>
 
@@ -123,7 +125,7 @@ Thank you! Looking forward to your service.
                         <form onSubmit={handleSubmit} className="order-form">
                             <div className="form-row">
                                 <div className="form-group">
-                                    <label htmlFor="name">Full Name *</label>
+                                    <label htmlFor="name">{t('orderForm.fullName')} *</label>
                                     <input
                                         type="text"
                                         id="name"
@@ -131,13 +133,13 @@ Thank you! Looking forward to your service.
                                         value={formData.name}
                                         onChange={handleChange}
                                         className={errors.name ? 'error' : ''}
-                                        placeholder="Enter your name"
+                                        placeholder={t('orderForm.namePlaceholder')}
                                     />
                                     {errors.name && <span className="error-message">{errors.name}</span>}
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="phone">Phone Number *</label>
+                                    <label htmlFor="phone">{t('orderForm.phoneNumber')} *</label>
                                     <input
                                         type="tel"
                                         id="phone"
@@ -145,7 +147,7 @@ Thank you! Looking forward to your service.
                                         value={formData.phone}
                                         onChange={handleChange}
                                         className={errors.phone ? 'error' : ''}
-                                        placeholder="10-digit mobile number"
+                                        placeholder={t('orderForm.phonePlaceholder')}
                                     />
                                     {errors.phone && <span className="error-message">{errors.phone}</span>}
                                 </div>
@@ -153,7 +155,7 @@ Thank you! Looking forward to your service.
 
                             <div className="form-row">
                                 <div className="form-group">
-                                    <label htmlFor="mediaType">Media Type *</label>
+                                    <label htmlFor="mediaType">{t('orderForm.mediaType')} *</label>
                                     <select
                                         id="mediaType"
                                         name="mediaType"
@@ -161,7 +163,7 @@ Thank you! Looking forward to your service.
                                         onChange={handleChange}
                                         className={errors.mediaType ? 'error' : ''}
                                     >
-                                        <option value="">Select media type</option>
+                                        <option value="">{t('orderForm.selectMediaType')}</option>
                                         {MEDIA_TYPES.map(type => (
                                             <option key={type} value={type}>{type}</option>
                                         ))}
@@ -170,7 +172,7 @@ Thank you! Looking forward to your service.
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="outputFormat">Output Format *</label>
+                                    <label htmlFor="outputFormat">{t('orderForm.outputFormat')} *</label>
                                     <select
                                         id="outputFormat"
                                         name="outputFormat"
@@ -179,7 +181,7 @@ Thank you! Looking forward to your service.
                                         className={errors.outputFormat ? 'error' : ''}
                                         disabled={!formData.mediaType}
                                     >
-                                        <option value="">Select output format</option>
+                                        <option value="">{t('orderForm.selectOutputFormat')}</option>
                                         {availableOutputs.map(format => (
                                             <option key={format} value={format}>{format}</option>
                                         ))}
@@ -190,7 +192,7 @@ Thank you! Looking forward to your service.
 
                             <div className="form-row">
                                 <div className="form-group">
-                                    <label htmlFor="quantity">Quantity *</label>
+                                    <label htmlFor="quantity">{t('orderForm.quantity')} *</label>
                                     <input
                                         type="number"
                                         id="quantity"
@@ -204,57 +206,57 @@ Thank you! Looking forward to your service.
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="delivery">Delivery Method *</label>
+                                    <label htmlFor="delivery">{t('orderForm.deliveryMethod')} *</label>
                                     <select
                                         id="delivery"
                                         name="delivery"
                                         value={formData.delivery}
                                         onChange={handleChange}
                                     >
-                                        <option value="pickup">Pickup from store</option>
-                                        <option value="delivery">Home delivery</option>
+                                        <option value="pickup">{t('orderForm.pickupFromStore')}</option>
+                                        <option value="delivery">{t('orderForm.homeDelivery')}</option>
                                     </select>
                                 </div>
                             </div>
 
                             <div className="form-group">
-                                <label htmlFor="notes">Additional Notes (Optional)</label>
+                                <label htmlFor="notes">{t('orderForm.additionalNotes')}</label>
                                 <textarea
                                     id="notes"
                                     name="notes"
                                     value={formData.notes}
                                     onChange={handleChange}
-                                    placeholder="Any special instructions or requirements..."
+                                    placeholder={t('orderForm.notesPlaceholder')}
                                     rows="4"
                                 ></textarea>
                             </div>
 
                             <button type="submit" className="submit-btn">
                                 <span className="btn-icon">💬</span>
-                                Send Order via WhatsApp
+                                {t('orderForm.submitButton')}
                             </button>
                         </form>
                     </div>
 
                     <div className="info-side">
                         <div className="info-box">
-                            <h3>📱 Quick & Easy Ordering</h3>
-                            <p>Your order details will be sent directly to our WhatsApp for instant processing.</p>
+                            <h3>📱 {t('orderForm.infoBox1Title')}</h3>
+                            <p>{t('orderForm.infoBox1Text')}</p>
                         </div>
 
                         <div className="info-box">
-                            <h3>⚡ Fast Response</h3>
-                            <p>We typically respond within 30 minutes during business hours.</p>
+                            <h3>⚡ {t('orderForm.infoBox2Title')}</h3>
+                            <p>{t('orderForm.infoBox2Text')}</p>
                         </div>
 
                         <div className="info-box">
-                            <h3>🔒 Secure & Private</h3>
-                            <p>Your information is only shared via WhatsApp and kept confidential.</p>
+                            <h3>🔒 {t('orderForm.infoBox3Title')}</h3>
+                            <p>{t('orderForm.infoBox3Text')}</p>
                         </div>
 
                         <div className="info-box">
-                            <h3>💡 Need Help?</h3>
-                            <p>Contact us directly on WhatsApp if you have any questions before ordering.</p>
+                            <h3>💡 {t('orderForm.infoBox4Title')}</h3>
+                            <p>{t('orderForm.infoBox4Text')}</p>
                             <a
                                 href={`https://wa.me/${WHATSAPP_NUMBER}`}
                                 target="_blank"

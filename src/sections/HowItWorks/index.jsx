@@ -1,35 +1,38 @@
+import { useTranslation } from 'react-i18next';
 import './HowItWorks.css';
 
 const HowItWorks = () => {
+    const { t } = useTranslation();
+    
     const steps = [
         {
             number: '1',
-            title: 'Choose Your Media',
-            description: 'Select the type of media you want to convert and your preferred output format.',
+            titleKey: 'howItWorks.step1.title',
+            descriptionKey: 'howItWorks.step1.description',
             icon: '📱'
         },
         {
             number: '2',
-            title: 'Place Your Order',
-            description: 'Fill out our simple order form and send your request directly via WhatsApp.',
+            titleKey: 'howItWorks.step2.title',
+            descriptionKey: 'howItWorks.step2.description',
             icon: '📋'
         },
         {
             number: '3',
-            title: 'Drop Off Media',
-            description: 'Bring your tapes, CDs, or DVDs to our location or arrange for pickup.',
+            titleKey: 'howItWorks.step3.title',
+            descriptionKey: 'howItWorks.step3.description',
             icon: '📦'
         },
         {
             number: '4',
-            title: 'We Convert',
-            description: 'Our expert team carefully converts your media to high-quality digital format.',
+            titleKey: 'howItWorks.step4.title',
+            descriptionKey: 'howItWorks.step4.description',
             icon: '⚙️'
         },
         {
             number: '5',
-            title: 'Get Your Files',
-            description: 'Receive your converted files on USB drive or via digital delivery.',
+            titleKey: 'howItWorks.step5.title',
+            descriptionKey: 'howItWorks.step5.description',
             icon: '✅'
         }
     ];
@@ -38,9 +41,9 @@ const HowItWorks = () => {
         <section id="how-it-works" className="how-it-works">
             <div className="how-it-works-container">
                 <div className="section-header">
-                    <h2 className="section-title">How It Works</h2>
+                    <h2 className="section-title">{t('howItWorks.title')}</h2>
                     <p className="section-subtitle">
-                        Simple, fast, and hassle-free media conversion in 5 easy steps
+                        {t('howItWorks.subtitle')}
                     </p>
                 </div>
 
@@ -50,8 +53,8 @@ const HowItWorks = () => {
                             <div className="step-number">{step.number}</div>
                             <div className="step-content">
                                 <div className="step-icon">{step.icon}</div>
-                                <h3 className="step-title">{step.title}</h3>
-                                <p className="step-description">{step.description}</p>
+                                <h3 className="step-title">{t(step.titleKey)}</h3>
+                                <p className="step-description">{t(step.descriptionKey)}</p>
                             </div>
                             {index < steps.length - 1 && (
                                 <div className="step-connector">→</div>

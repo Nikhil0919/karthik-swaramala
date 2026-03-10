@@ -1,6 +1,9 @@
+import { useTranslation } from 'react-i18next';
 import './Hero.css';
 
 const Hero = () => {
+    const { t } = useTranslation();
+    
     const scrollToOrder = () => {
         const element = document.getElementById('order');
         if (element) {
@@ -13,29 +16,28 @@ const Hero = () => {
             <div className="hero-container">
                 <div className="hero-content">
                     <h1 className="hero-title">
-                        Preserve Your <span className="highlight">Precious Memories</span>
+                        {t('hero.title')} <span className="highlight">{t('hero.titleHighlight')}</span>
                     </h1>
                     <p className="hero-subtitle">
-                        Transform your cassettes, CDs, and video tapes to pendrive. Old negative to photo prints.
-                        Voice recording services, courier available. Electronics and audio accessories sales.
+                        {t('hero.subtitle')}
                     </p>
                     <div className="hero-features">
                         <div className="feature-item">
                             <span className="feature-icon">✓</span>
-                            <span>High Quality Conversion</span>
+                            <span>{t('hero.feature1')}</span>
                         </div>
                         <div className="feature-item">
                             <span className="feature-icon">✓</span>
-                            <span>Courier Available</span>
+                            <span>{t('hero.feature2')}</span>
                         </div>
                         <div className="feature-item">
                             <span className="feature-icon">✓</span>
-                            <span>Electronics Sales</span>
+                            <span>{t('hero.feature3')}</span>
                         </div>
                     </div>
                     <div className="hero-cta">
                         <button className="primary-btn" onClick={scrollToOrder}>
-                            Start Converting
+                            {t('hero.ctaButton')}
                         </button>
                     </div>
                 </div>

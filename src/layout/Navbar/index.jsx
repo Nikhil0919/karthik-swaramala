@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './Navbar.css';
 
 const Navbar = () => {
+    const { t, i18n } = useTranslation();
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -21,12 +23,16 @@ const Navbar = () => {
         }
     };
 
+    const changeLanguage = (lang) => {
+        i18n.changeLanguage(lang);
+    };
+
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="navbar-container">
                 <div className="navbar-logo" onClick={() => scrollToSection('hero')}>
                     <span className="logo-icon">📼</span>
-                    <span className="logo-text">Sree Karthik Swaramala</span>
+                    <span className="logo-text">{t('navbar.brandName')}</span>
                 </div>
 
                 <button
@@ -37,16 +43,31 @@ const Navbar = () => {
                 </button>
 
                 <ul className={`navbar-menu ${mobileMenuOpen ? 'open' : ''}`}>
-                    <li onClick={() => scrollToSection('services')}>Services</li>
-                    <li onClick={() => scrollToSection('how-it-works')}>How It Works</li>
-                    <li onClick={() => scrollToSection('faq')}>FAQ</li>
-                    <li onClick={() => scrollToSection('contact')}>Contact</li>
+                    <li onClick={() => scrollToSection('services')}>{t('navbar.services')}</li>
+                    <li onClick={() => scrollToSection('how-it-works')}>{t('navbar.howItWorks')}</li>
+                    <li onClick={() => scrollToSection('faq')}>{t('navbar.faq')}</li>
+                    <li onClick={() => scrollToSection('contact')}>{t('navbar.contact')}</li>
+                    <li className="language-switcher">
+                        <button
+                            onClick={() => changeLanguage('en')}
+                            className={i18n.language === 'en' ? 'active' : ''}
+                        >
+                            English
+                        </button>
+                        <span className="separator">|</span>
+                        <button
+                            onClick={() => changeLanguage('te')}
+                            className={i18n.language === 'te' ? 'active' : ''}
+                        >
+                            తెలుగు
+                        </button>
+                    </li>
                     <li className="cta-item">
                         <button
                             className="cta-button"
                             onClick={() => scrollToSection('order')}
                         >
-                            Order Now
+                            {t('navbar.orderNow')}
                         </button>
                     </li>
                 </ul>

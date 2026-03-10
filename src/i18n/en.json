@@ -1,0 +1,198 @@
+{
+  "navbar": {
+    "brandName": "Sree Karthik Swaramala",
+    "services": "Services",
+    "howItWorks": "How It Works",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "orderNow": "Order Now"
+  },
+  "hero": {
+    "title": "Preserve Your",
+    "titleHighlight": "Precious Memories",
+    "subtitle": "Transform your cassettes, CDs, and video tapes to pendrive. Old negative to photo prints. Voice recording services, courier available. Electronics and audio accessories sales.",
+    "feature1": "High Quality Conversion",
+    "feature2": "Courier Available",
+    "feature3": "Electronics Sales",
+    "ctaButton": "Start Converting"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Professional media conversion services for all your analog and digital media",
+    "service1": {
+      "title": "CD to Pendrive",
+      "description": "Convert your CDs to pendrive for easy access and sharing.",
+      "format": "Pendrive"
+    },
+    "service2": {
+      "title": "VCR Cassette Marriage to Pendrive",
+      "description": "Preserve your precious wedding memories by converting VCR cassettes to pendrive.",
+      "format": "Pendrive"
+    },
+    "service3": {
+      "title": "Handy Cam Cassette to Pendrive",
+      "description": "Transfer your handy cam cassette recordings to pendrive format.",
+      "format": "Pendrive"
+    },
+    "service4": {
+      "title": "Audio Cassette to Pendrive",
+      "description": "Transform tape recorder and audio cassettes into digital audio files on pendrive.",
+      "format": "Pendrive"
+    },
+    "service5": {
+      "title": "Old Negative to Photo Print",
+      "description": "Get high-quality photo prints from your old negatives.",
+      "format": "Photo Print"
+    },
+    "service6": {
+      "title": "Mic Publicity Voice Recording",
+      "description": "Professional voice recording services for elections, schools, temples, and business announcements.",
+      "format": "Custom"
+    },
+    "service7": {
+      "title": "Gramophone Record Sales",
+      "description": "Buy and sell vintage gramophone records.",
+      "format": "Sales"
+    },
+    "service8": {
+      "title": "Cassette Sales",
+      "description": "Empty audio cassettes and company cassettes available for purchase.",
+      "format": "Sales"
+    },
+    "service9": {
+      "title": "Electronics & Accessories Sales",
+      "description": "Pendrives, empty CDs, speakers, audio deck & amplifier, pens, and Walkman available for sale.",
+      "format": "Sales"
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Simple, fast, and hassle-free media conversion in 5 easy steps",
+    "step1": {
+      "title": "Choose Your Media",
+      "description": "Select the type of media you want to convert and your preferred output format."
+    },
+    "step2": {
+      "title": "Place Your Order",
+      "description": "Fill out our simple order form and send your request directly via WhatsApp."
+    },
+    "step3": {
+      "title": "Drop Off Media",
+      "description": "Bring your tapes, CDs, or DVDs to our location or arrange for pickup."
+    },
+    "step4": {
+      "title": "We Convert",
+      "description": "Our expert team carefully converts your media to high-quality digital format."
+    },
+    "step5": {
+      "title": "Get Your Files",
+      "description": "Receive your converted files on USB drive or via digital delivery."
+    }
+  },
+  "orderForm": {
+    "title": "Place Your Order",
+    "subtitle": "Fill out the form below and send your order directly via WhatsApp",
+    "fullName": "Full Name",
+    "phoneNumber": "Phone Number",
+    "mediaType": "Media Type",
+    "outputFormat": "Output Format",
+    "quantity": "Quantity",
+    "deliveryMethod": "Delivery Method",
+    "additionalNotes": "Additional Notes (Optional)",
+    "namePlaceholder": "Enter your name",
+    "phonePlaceholder": "10-digit mobile number",
+    "notesPlaceholder": "Any special instructions or requirements...",
+    "selectMediaType": "Select media type",
+    "selectOutputFormat": "Select output format",
+    "pickupFromStore": "Pickup from store",
+    "homeDelivery": "Home delivery",
+    "submitButton": "Send Order via WhatsApp",
+    "nameRequired": "Name is required",
+    "phoneRequired": "Phone number is required",
+    "phoneInvalid": "Please enter a valid 10-digit phone number",
+    "mediaTypeRequired": "Please select media type",
+    "outputFormatRequired": "Please select output format",
+    "quantityInvalid": "Quantity must be at least 1",
+    "infoBox1Title": "Quick & Easy Ordering",
+    "infoBox1Text": "Your order details will be sent directly to our WhatsApp for instant processing.",
+    "infoBox2Title": "Fast Response",
+    "infoBox2Text": "We typically respond within 30 minutes during business hours.",
+    "infoBox3Title": "Secure & Private",
+    "infoBox3Text": "Your information is only shared via WhatsApp and kept confidential.",
+    "infoBox4Title": "Need Help?",
+    "infoBox4Text": "Contact us directly on WhatsApp if you have any questions before ordering.",
+    "chatNow": "Chat Now",
+    "whatsappMessage": {
+      "title": "New Media Conversion Request",
+      "name": "Name:",
+      "phone": "Phone:",
+      "mediaType": "Media Type:",
+      "outputFormat": "Output Format:",
+      "quantity": "Quantity:",
+      "items": "item(s)",
+      "deliveryMethod": "Delivery Method:",
+      "pickupFromStore": "Pickup from store",
+      "homeDelivery": "Home delivery",
+      "notes": "Notes:",
+      "thankYou": "Thank you! Looking forward to your service."
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about our media conversion services",
+    "question1": "How long does the conversion process take?",
+    "answer1": "Most conversions are completed within 2-3 business days. For large bulk orders, we may need additional time. We'll provide you with an estimated timeline when you place your order.",
+    "question2": "What condition should my media be in?",
+    "answer2": "We can work with media in various conditions. However, the quality of the output depends on the condition of the original. Damaged tapes or discs may result in partial data recovery or quality loss.",
+    "question3": "Do you offer pickup and delivery services?",
+    "answer3": "Yes! You can choose to drop off your media at our location, or we can arrange pickup and delivery for your convenience. Delivery charges may apply based on your location.",
+    "question4": "What formats do you deliver the converted files in?",
+    "answer4": "We provide converted files in widely compatible formats: MP4 for video, MP3 for audio. Files can be delivered on USB drives or via digital delivery methods, depending on your preference.",
+    "question5": "Is my data secure during the conversion process?",
+    "answer5": "Absolutely. We treat all customer media with the utmost confidentiality and care. Your files are handled securely throughout the process and are never shared with third parties.",
+    "question6": "Do you offer bulk discounts?",
+    "answer6": "Yes! We offer special pricing for bulk orders. Contact us via WhatsApp with details about your order quantity, and we'll provide you with a customized quote.",
+    "question7": "What if my media is damaged or unreadable?",
+    "answer7": "We have specialized equipment to handle damaged media. While we can't guarantee 100% recovery, we'll do our best to salvage as much data as possible. You only pay for successful conversions.",
+    "question8": "Can I get my original media back after conversion?",
+    "answer8": "Of course! We return all original media to you along with the converted digital files. Your memories are precious, and we ensure they're safely returned.",
+    "stillHaveQuestions": "Still have questions?",
+    "contactUsOnWhatsApp": "Contact Us on WhatsApp"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "We're here to help preserve your precious memories",
+    "visitUs": "Visit Us",
+    "address": "Sree Karthik Swaramala\nDurgaiah Street, Near Rajtowers Hotel\nGovernor Peta, Eluru Road, Vijayawada",
+    "callUs": "Call Us",
+    "phoneTime": "8499009004\nMon-Sat: 10 AM - 7 PM",
+    "ourServices": "Our Services",
+    "servicesText": "Cassette Conversions, Photo Prints\nVoice Recording & Electronics Sales",
+    "getDirections": "Get Directions"
+  },
+  "footer": {
+    "brandName": "Sree Karthik Swaramala",
+    "description": "Professional media conversion services for preserving your precious memories. Transform cassettes, CDs, and video tapes to digital with care and quality.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "howItWorks": "How It Works",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "orderNow": "Order Now",
+    "ourServices": "Our Services",
+    "cdToPendrive": "CD to Pendrive",
+    "vcrToDigital": "VCR Cassette to Digital",
+    "audioCassetteConversion": "Audio Cassette Conversion",
+    "negativeToPhoto": "Old Negative to Photo Print",
+    "voiceRecording": "Voice Recording Services",
+    "contactInfo": "Contact Info",
+    "address": "Durgaiah Street, Near Rajtowers Hotel,\nGovernor Peta, Vijayawada",
+    "phone": "8499009004",
+    "whatsappAvailable": "WhatsApp Available",
+    "businessHours": "Mon-Sat: 10 AM - 7 PM",
+    "allRightsReserved": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookiePolicy": "Cookie Policy"
+  }
+}

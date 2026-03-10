@@ -1,7 +1,9 @@
-import { WHATSAPP_NUMBER } from '../config/constants';
+import { useTranslation } from 'react-i18next';
+import { WHATSAPP_NUMBER } from '../../config/constants';
 import './Contact.css';
 
 const Contact = () => {
+    const { t } = useTranslation();
     const businessAddress = "Sree Karthik Swaramala, Durgaiah Street, Near Rajtowers Hotel, Governor Peta, Eluru Road, Vijayawada";
 
     const handleGetDirections = () => {
@@ -13,9 +15,9 @@ const Contact = () => {
         <section id="contact" className="contact-section">
             <div className="contact-container">
                 <div className="section-header">
-                    <h2 className="section-title">Get In Touch</h2>
+                    <h2 className="section-title">{t('contact.title')}</h2>
                     <p className="section-subtitle">
-                        We're here to help preserve your precious memories
+                        {t('contact.subtitle')}
                     </p>
                 </div>
 
@@ -24,24 +26,24 @@ const Contact = () => {
                         <div className="info-item">
                             <div className="info-icon">📍</div>
                             <div className="info-text">
-                                <h4>Visit Us</h4>
-                                <p>Sree Karthik Swaramala<br />Durgaiah Street, Near Rajtowers Hotel<br />Governor Peta, Eluru Road, Vijayawada</p>
+                                <h4>{t('contact.visitUs')}</h4>
+                                <p style={{ whiteSpace: 'pre-line' }}>{t('contact.address')}</p>
                             </div>
                         </div>
 
                         <div className="info-item">
                             <div className="info-icon">📞</div>
                             <div className="info-text">
-                                <h4>Call Us</h4>
-                                <p>8499009004<br />Mon-Sat: 10 AM - 7 PM</p>
+                                <h4>{t('contact.callUs')}</h4>
+                                <p style={{ whiteSpace: 'pre-line' }}>{t('contact.phoneTime')}</p>
                             </div>
                         </div>
 
                         <div className="info-item">
                             <div className="info-icon">🎵</div>
                             <div className="info-text">
-                                <h4>Our Services</h4>
-                                <p>Cassette Conversions, Photo Prints<br />Voice Recording & Electronics Sales</p>
+                                <h4>{t('contact.ourServices')}</h4>
+                                <p style={{ whiteSpace: 'pre-line' }}>{t('contact.servicesText')}</p>
                             </div>
                         </div>
                     </div>
@@ -58,7 +60,7 @@ const Contact = () => {
                             referrerPolicy="no-referrer-when-downgrade"
                         ></iframe>
                         <button className="directions-btn" onClick={handleGetDirections}>
-                            📍 Get Directions
+                            📍 {t('contact.getDirections')}
                         </button>
                     </div>
                 </div>
