@@ -6,11 +6,29 @@ const Navbar = () => {
     const { t, i18n } = useTranslation();
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('hero');
 
     useEffect(() => {
+        // Keep this in the same order as sections rendered in App.jsx.
+        const sectionIds = ['hero', 'services', 'how-it-works', 'order', 'faq', 'contact'];
+
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
+
+            const scrollPosition = window.scrollY + 120;
+            let currentSection = 'hero';
+
+            sectionIds.forEach((id) => {
+                const section = document.getElementById(id);
+                if (section && scrollPosition >= section.offsetTop) {
+                    currentSection = id;
+                }
+            });
+
+            setActiveSection(currentSection);
         };
+
+        handleScroll();
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -19,6 +37,7 @@ const Navbar = () => {
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
+            setActiveSection(id);
             setMobileMenuOpen(false);
         }
     };
@@ -43,10 +62,30 @@ const Navbar = () => {
                 </button>
 
                 <ul className={`navbar-menu ${mobileMenuOpen ? 'open' : ''}`}>
-                    <li onClick={() => scrollToSection('services')}>{t('navbar.services')}</li>
-                    <li onClick={() => scrollToSection('how-it-works')}>{t('navbar.howItWorks')}</li>
-                    <li onClick={() => scrollToSection('faq')}>{t('navbar.faq')}</li>
-                    <li onClick={() => scrollToSection('contact')}>{t('navbar.contact')}</li>
+                    <li
+                        className={`nav-item ${activeSection === 'services' ? 'active' : ''}`}
+                        onClick={() => scrollToSection('services')}
+                    >
+                        {t('navbar.services')}
+                    </li>
+                    <li
+                        className={`nav-item ${activeSection === 'how-it-works' ? 'active' : ''}`}
+                        onClick={() => scrollToSection('how-it-works')}
+                    >
+                        {t('navbar.howItWorks')}
+                    </li>
+                    <li
+                        className={`nav-item ${activeSection === 'faq' ? 'active' : ''}`}
+                        onClick={() => scrollToSection('faq')}
+                    >
+                        {t('navbar.faq')}
+                    </li>
+                    <li
+                        className={`nav-item ${activeSection === 'contact' ? 'active' : ''}`}
+                        onClick={() => scrollToSection('contact')}
+                    >
+                        {t('navbar.contact')}
+                    </li>
                     <li className="language-switcher">
                         <button
                             onClick={() => changeLanguage('en')}

@@ -10,10 +10,10 @@
   "hero": {
     "title": "Preserve Your",
     "titleHighlight": "Precious Memories",
-    "subtitle": "Transform your cassettes, CDs, and video tapes to pendrive. Old negative to photo prints. Voice recording services, courier available. Electronics and audio accessories sales.",
+    "subtitle": "Transform your Marriage cassettes, CDs, and video tapes to pendrive. Old negative to photo prints. Voice recording services, courier available. Electronics and audio accessories sales.",
     "feature1": "High Quality Conversion",
     "feature2": "Courier Available",
-    "feature3": "Electronics Sales",
+    "feature3": "Empty Audio Cassettes & Company Audio Cassettes",
     "ctaButton": "Start Converting"
   },
   "services": {
@@ -61,7 +61,7 @@
     },
     "service9": {
       "title": "Electronics & Accessories Sales",
-      "description": "Pendrives, empty CDs, speakers, audio deck & amplifier, pens, and Walkman available for sale.",
+      "description": "Pendrives, empty CDs, audio deck & amplifier, and Walkman available for sale.",
       "format": "Sales"
     }
   },
@@ -138,8 +138,7 @@
     }
   },
   "faq": {
-    "title": "Frequently Asked Questions",
-    "subtitle": "Find answers to common questions about our media conversion services",
+    "title": "ASK QUESTION HERE",
     "question1": "How long does the conversion process take?",
     "answer1": "Most conversions are completed within 2-3 business days. For large bulk orders, we may need additional time. We'll provide you with an estimated timeline when you place your order.",
     "question2": "What condition should my media be in?",
