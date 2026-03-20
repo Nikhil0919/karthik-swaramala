@@ -3,7 +3,7 @@
     "brandName": "Sree Karthik Swaramala",
     "services": "Services",
     "howItWorks": "How It Works",
-    "faq": "FAQ",
+    "faq": "AQH",
     "contact": "Contact",
     "orderNow": "Order Now"
   },
@@ -138,7 +138,7 @@
     }
   },
   "faq": {
-    "title": "ASK QUESTION HERE",
+    "title": "Ask question here",
     "question1": "How long does the conversion process take?",
     "answer1": "Most conversions are completed within 2-3 business days. For large bulk orders, we may need additional time. We'll provide you with an estimated timeline when you place your order.",
     "question2": "What condition should my media be in?",
@@ -164,9 +164,9 @@
     "visitUs": "Visit Us",
     "address": "Sree Karthik Swaramala\nDurgaiah Street, Near Rajtowers Hotel\nGovernor Peta, Eluru Road, Vijayawada",
     "callUs": "Call Us",
-    "phoneTime": "8499009004\nMon-Sat: 10 AM - 7 PM",
+    "phoneTime": "8499009004\nMon-Sat: 10 AM - 10 PM",
     "ourServices": "Our Services",
-    "servicesText": "Cassette Conversions, Photo Prints\nVoice Recording & Electronics Sales",
+    "servicesText": "Cassette Conversions, Photo Prints\nVoice Recording",
     "getDirections": "Get Directions"
   },
   "footer": {
@@ -175,7 +175,7 @@
     "quickLinks": "Quick Links",
     "services": "Services",
     "howItWorks": "How It Works",
-    "faq": "FAQ",
+    "faq": "AQH",
     "contact": "Contact",
     "orderNow": "Order Now",
     "ourServices": "Our Services",

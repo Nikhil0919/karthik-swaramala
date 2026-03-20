@@ -1,4 +1,8 @@
 import { useTranslation } from 'react-i18next';
+import image1 from '../../assets/1.png';
+import image2 from '../../assets/2.png';
+import image3 from '../../assets/3.png';
+import image4 from '../../assets/4.png';
 import './Hero.css';
 
 const Hero = () => {
@@ -43,10 +47,18 @@ const Hero = () => {
                 </div>
                 <div className="hero-image">
                     <div className="media-icons">
-                        <div className="media-icon">📼</div>
-                        <div className="media-icon">💿</div>
-                        <div className="media-icon">📀</div>
-                        <div className="media-icon">📱</div>
+                        <div className="media-icon">
+                            <img src={image1} alt="Image 1" />
+                        </div>
+                        <div className="media-icon">
+                            <img src={image2} alt="Image 2" />
+                        </div>
+                        <div className="media-icon">
+                            <img src={image3} alt="Image 3" />
+                        </div>
+                        <div className="media-icon">
+                            <img src={image4} alt="Image 4" />
+                        </div>
                     </div>
                 </div>
             </div>

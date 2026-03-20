@@ -243,29 +243,6 @@ ${t('orderForm.whatsappMessage.thankYou')}
                             <h3>📱 {t('orderForm.infoBox1Title')}</h3>
                             <p>{t('orderForm.infoBox1Text')}</p>
                         </div>
-
-                        <div className="info-box">
-                            <h3>⚡ {t('orderForm.infoBox2Title')}</h3>
-                            <p>{t('orderForm.infoBox2Text')}</p>
-                        </div>
-
-                        <div className="info-box">
-                            <h3>🔒 {t('orderForm.infoBox3Title')}</h3>
-                            <p>{t('orderForm.infoBox3Text')}</p>
-                        </div>
-
-                        <div className="info-box">
-                            <h3>💡 {t('orderForm.infoBox4Title')}</h3>
-                            <p>{t('orderForm.infoBox4Text')}</p>
-                            <a
-                                href={`https://wa.me/${WHATSAPP_NUMBER}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="chat-link"
-                            >
-                                Start Chat →
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@ const FAQ = () => {
         <section id="faq" className="faq-section">
             <div className="faq-container">
                 <div className="section-header">
-                    <h2 className="section-title">ASK QUESTION HERE</h2>
+                    <h2 className="section-title">{t('faq.title')}</h2>
                 </div>
 
                 <div className="faq-cta">
